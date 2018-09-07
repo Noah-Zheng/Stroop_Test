@@ -11790,6 +11790,7 @@ div#notebook {
 <li><a href="https://libguides.library.kent.edu/SPSS/PairedSamplestTest">https://libguides.library.kent.edu/SPSS/PairedSamplestTest</a> Paired t Test</li>
 <li><a href="https://pythonfordatascience.org/paired-samples-t-test-python/">https://pythonfordatascience.org/paired-samples-t-test-python/</a> Paired t Test with Python</li>
 <li><a href="https://docs.scipy.org/doc/scipy-0.14.0/reference/generated/scipy.stats.wilcoxon.html">https://docs.scipy.org/doc/scipy-0.14.0/reference/generated/scipy.stats.wilcoxon.html</a> Wilcoxon Signed-Ranks Test</li>
+<li><a href="https://docs.scipy.org/doc/scipy/reference/generated/scipy.stats.ttest_rel.html">https://docs.scipy.org/doc/scipy/reference/generated/scipy.stats.ttest_rel.html</a> Paired t Test</li>
 </ol>
 
 </div>
@@ -12310,6 +12311,58 @@ Assumptions checks are carried out in part 5.</p>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>The test statistic is 0 and p-value is 1.82 e-05 &lt; 0.01. The result is significant. The null hypothsis should be rejected as expected.<br>
+The response time in the incongruent condition is not the same as, but longer than that in the congruent condition.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>As reviewed by the previous reviewer: "I would still stick to paired t test as the sample size is small and we do not have population parameters."  A paired t-test is applied below.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[8]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">stats</span><span class="o">.</span><span class="n">ttest_rel</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">Incongruent</span><span class="p">,</span> <span class="n">df</span><span class="o">.</span><span class="n">Congruent</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt output_prompt">Out[8]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>Ttest_relResult(statistic=8.020706944109957, pvalue=4.103000585711178e-08)</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>The test statistic is 8.0207 and p-value is 4.103 e-08 &lt; 0.01. The result is significant. The null hypothsis should be rejected as expected.
 The response time in the incongruent condition is not the same as, but longer than that in the congruent condition.</p>
 
 </div>
